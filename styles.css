@@ -1,0 +1,292 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* BARRA DE IDIOMA NO TOPO */
+.top-language {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.language-select {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 14px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove outline/foco padrão */
+.language-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* LOGO DO INSTAGRAM */
+.logo {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+/* BOTÃO "ENTRAR COM O FACEBOOK" */
+.facebook-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1877F2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.facebook-btn:hover {
+  background-color: #1256A1;
+}
+
+/* FORMULÁRIO DE LOGIN */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+form input {
+  background-color: #262626;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  padding: 12px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #888;
+}
+
+/* BOTÃO "ENTRAR" */
+.btn-login {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #0077c2;
+}
+
+/* LINK "ESQUECEU A SENHA?" */
+.forgot-password {
+  display: block;
+  margin-top: 5px;
+  color: #b0b0b0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* BOTÃO "CRIAR NOVA CONTA" */
+.create-account {
+  margin-top: 20px;
+  background: none;
+  border: 1px solid #0095f6;
+  color: #0095f6;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.create-account:hover {
+  background-color: rgba(0, 149, 246, 0.1);
+}
+
+/* LOGO META */
+.meta-logo {
+  width: 70px;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+/* POPUPS GERAIS */
+.popup {
+  display: none; /* oculto por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* POP-UP DE AVISO */
+.popup-content {
+  background: #262626;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* BOTÃO OK DO POP-UP: tamanho igual ao botão "Entrar" */
+.close-popup {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+
+.close-popup:hover {
+  opacity: 0.9;
+}
+
+/* POP-UP DO FACEBOOK */
+.facebook-popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.facebook-popup-content h2 {
+  font-size: 18px;
+  color: #1877F2;
+  margin-bottom: 10px;
+}
+
+.facebook-popup-content p {
+  font-size: 14px;
+  color: #606770;
+  margin-bottom: 15px;
+}
+
+/* Inputs do mini formulário do Facebook */
+/* Define fundo branco e texto preto para os inputs */
+.fb-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.fb-input-container i {
+  margin-right: 8px;
+  color: #606770;
+}
+
+.fb-input-container input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Botão "Entrar" no pop-up do Facebook */
+.facebook-popup-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #1877F2;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+.facebook-popup-btn:hover {
+  background-color: #145dbf;
+}
+
+/* Botão "Cancelar" no pop-up do Facebook */
+.facebook-popup-cancel {
+  background: none;
+  border: none;
+  color: #1877F2;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 400px) {
+  .container {
+    max-width: 90%;
+  }
+}
